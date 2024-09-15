@@ -26,4 +26,8 @@ Thumbs.db
 # Backup files
 *~
 
+# Build files
 build/
+dist/
+
+*.egg-info/
