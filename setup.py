@@ -26,7 +26,7 @@ setup(
             'evaluate_random_forest_model=scripts.07_evaluate_model:evaluate_rf',
             'evaluate_svm_model=scripts.07_evaluate_model:evaluate_svm',
             'evaluate_gbm_model=scripts.07_evaluate_model:evaluate_gbm',
-            'main=scripts.main:main',   
+            'main=main:main',   
         ],
     },
 )
