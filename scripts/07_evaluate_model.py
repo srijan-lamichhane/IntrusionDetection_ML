@@ -71,10 +71,23 @@ def evaluate_model(model_path, scaler_path, test_data_path, plot_save_path, repo
     # Plot and save confusion matrix
     plot_cm(Y_test, Y_pred, f'Confusion Matrix for {model_path}', plot_save_path)
 
-if __name__ == '__main__':
-    # Evaluate all models
+    # Print success message
+    print('!!Evaluation Successful!! \nCheck Evaluation Report at /results/metrics/ \nCheck Confusion Matrix at /results/plots/')
+
+def evaluate_gbm():
     evaluate_model('models/gbm_model.pkl', 'models/scaler.pkl', 'data/processed/test_data_processed.csv', './results/plots/gbm_confusion_matrix.png', './results/metrics/gbm_report.txt')
+
+def evaluate_svm():
     evaluate_model('models/svm_model.pkl', 'models/scaler.pkl', 'data/processed/test_data_processed.csv', './results/plots/svm_confusion_matrix.png', './results/metrics/svm_report.txt')
+
+def evaluate_rf():
     evaluate_model('models/random_forest_model.pkl', 'models/scaler.pkl', 'data/processed/test_data_processed.csv', './results/plots/rf_confusion_matrix.png', './results/metrics/rf_report.txt')
+
+def evaluate_knn():
     evaluate_model('models/knn_model.pkl', 'models/scaler.pkl', 'data/processed/test_data_processed.csv', './results/plots/knn_confusion_matrix.png', './results/metrics/knn_report.txt')
-            
+
+if __name__ == '__main__':
+    evaluate_gbm()
+    evaluate_svm()
+    evaluate_rf()
+    evaluate_knn()

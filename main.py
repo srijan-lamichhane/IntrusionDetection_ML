@@ -8,7 +8,10 @@ def main():
         4: 'Train Random Forest Model',
         5: 'Train SVM Model',
         6: 'Train GBM Model',
-        7: 'Evaluate Models',
+        7: 'Evaluate KNN Model',
+        8: 'Evaluate Random Forest Model',
+        9: 'Evaluate SVM Model',
+        10: 'Evaluate GBM Model',
         0: 'Exit',
     }
 
