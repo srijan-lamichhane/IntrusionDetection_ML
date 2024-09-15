@@ -16,7 +16,10 @@ def main():
     X_train = scaler.transform(X_train)
 
     # Train and save KNN model
-    train_and_save_knn(X_train, Y_train, 'models/knn_model.pkl')
+    best_model, best_params = train_and_save_knn(X_train, Y_train, 'models/knn_model.pkl')
+
+    print("Best Parameters:", best_params)
+    print("KNN model trained and saved successfully.")
 
 if __name__ == '__main__':
     main()
