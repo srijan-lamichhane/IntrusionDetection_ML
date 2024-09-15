@@ -38,7 +38,7 @@ def plot_cm(y_true, y_pred, title, save_path):
 def evaluate_model(model_path, scaler_path, test_data_path, plot_save_path, report_save_path):
     """Evaluate the model on test data."""
     # Load test data and scaler
-    test_df = pd.read_csv(test_data_path)
+    test_df = load_data(test_data_path)
     scaler = load_scaler(scaler_path)
 
     # Define features and labels

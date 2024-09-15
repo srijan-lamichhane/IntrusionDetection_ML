@@ -12,16 +12,18 @@ setup(
         'joblib',
         'matplotlib',
         'seaborn',
+        'setuptools'
     ],
     entry_points={
-        'console_scripts': [
-            'preprocess_data=scripts.preprocess_data:main',
-            'train_scaler=scripts.train_scaler:main',
-            'train_gbm=scripts.train_gbm:main',
-            'train_svm=scripts.train_svm:main',
-            'train_rf=scripts.train_rf:main',
-            'train_knn=scripts.train_knn:main',
-            'evaluate_model=scripts.evaluate_model:main',
+        'console_scripts': [            
+            'preprocess_data=scripts.01_preprocess_data:main',
+            'train_scalar_model=scripts.02_train_scalar:main',
+            'train_knn_model=scripts.03_train_knn:main',
+            'train_random_forest_model=scripts.04_train_rf:main',
+            'train_svm_model=scripts.05_train_svm:main',
+            'train_gbm_model=scripts.06_train_gbm:main',
+            'evaluate_models=scripts.07_evaluate_model:main',
+            'main=scripts.main:main',   
         ],
     },
 )

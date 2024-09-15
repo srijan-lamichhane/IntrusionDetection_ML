@@ -1,4 +1,3 @@
-import pandas as pd
 from src.data.load_data import load_data
 from src.data.preprocess import preprocess_data
 
@@ -14,6 +13,9 @@ def main():
     # Save preprocessed data
     train_df.to_csv('data/processed/train_data_processed.csv', index=False)
     test_df.to_csv('data/processed/test_data_processed.csv', index=False)
+
+    # Print sucess message
+    print('!!Data Preprocessing Successful!! \nCheck preprocessed data at /data/processed/')
 
 if __name__ == '__main__':
     main()
