@@ -7,8 +7,8 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from src.data.load_data import load_data
 from src.processing.scaler import load_scaler
 
-def plot_cm(y_true, y_pred, title):
-    """Plot confusion matrix."""
+def plot_cm(y_true, y_pred, title, save_path):
+    """Plot and save confusion matrix."""
     figsize = (10, 10)
     cm = confusion_matrix(y_true, y_pred, labels=np.unique(y_true))
     cm_sum = np.sum(cm, axis=1, keepdims=True)
@@ -32,9 +32,10 @@ def plot_cm(y_true, y_pred, title):
     fig, ax = plt.subplots(figsize=figsize)
     plt.title(title)
     sns.heatmap(cm, cmap="mako", annot=annot, fmt='', ax=ax)
-    plt.show()
+    plt.savefig(save_path)
+    plt.close()
 
-def evaluate_model(model_path, scaler_path, test_data_path):
+def evaluate_model(model_path, scaler_path, test_data_path, plot_save_path, report_save_path):
     """Evaluate the model on test data."""
     # Load test data and scaler
     test_df = pd.read_csv(test_data_path)
@@ -55,18 +56,25 @@ def evaluate_model(model_path, scaler_path, test_data_path):
 
     # Calculate accuracy
     accuracy = accuracy_score(Y_test, Y_pred)
-    print(f'Testing accuracy: {accuracy}')
+    accuracy_text = f'Testing accuracy for {model_path}: {accuracy}'
+    print(accuracy_text)
 
     # Print classification report
     report = classification_report(Y_test, Y_pred)
     print(report)
 
-    # Plot confusion matrix
-    plot_cm(Y_test, Y_pred, f'Confusion Matrix for {model_path}')
+    # Save accuracy and report to text file
+    with open(report_save_path, 'w') as f:
+        f.write(accuracy_text + '\n')
+        f.write(report + '\n')
+
+    # Plot and save confusion matrix
+    plot_cm(Y_test, Y_pred, f'Confusion Matrix for {model_path}', plot_save_path)
 
 if __name__ == '__main__':
     # Evaluate all models
-    evaluate_model('models/gbm_model.pkl', 'models/scaler.pkl', 'data/processed/test_data_processed.csv')
-    evaluate_model('models/svm_model.pkl', 'models/scaler.pkl', 'data/processed/test_data_processed.csv')
-    evaluate_model('models/random_forest_model.pkl', 'models/scaler.pkl', 'data/processed/test_data_processed.csv')
-    evaluate_model('models/knn_model.pkl', 'models/scaler.pkl', 'data/processed/test_data_processed.csv')
+    evaluate_model('models/gbm_model.pkl', 'models/scaler.pkl', 'data/processed/test_data_processed.csv', './results/plots/gbm_confusion_matrix.png', './results/metrics/gbm_report.txt')
+    evaluate_model('models/svm_model.pkl', 'models/scaler.pkl', 'data/processed/test_data_processed.csv', './results/plots/svm_confusion_matrix.png', './results/metrics/svm_report.txt')
+    evaluate_model('models/random_forest_model.pkl', 'models/scaler.pkl', 'data/processed/test_data_processed.csv', './results/plots/rf_confusion_matrix.png', './results/metrics/rf_report.txt')
+    evaluate_model('models/knn_model.pkl', 'models/scaler.pkl', 'data/processed/test_data_processed.csv', './results/plots/knn_confusion_matrix.png', './results/metrics/knn_report.txt')
+            
