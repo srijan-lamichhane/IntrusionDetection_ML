@@ -31,7 +31,7 @@ Follow these steps to set up the project:
 
 1. **Clone the repository**:
    ```zsh
-   git clone https://github.com/your-username/  .git
+   git clone https://github.com/srijan-lamichhane/IntrusionDetection_ML.git
    cd IntrusionVigor
    ```
 2. **Copy the `.env.example` to `.env`**:
