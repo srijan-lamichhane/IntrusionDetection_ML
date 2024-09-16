@@ -8,7 +8,8 @@ IntrusionVigor is a machine learning-based intrusion detection system designed t
   - [Table of Contents](#table-of-contents)
   - [Project Abstract](#project-abstract)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+  - [Installation for Linux](#installation-for-linux)
+  - [Installation for Windows](#installation-for-windows)
   - [Usage](#usage)
   - [Commands](#commands)
   - [Contributing](#contributing)
@@ -31,7 +32,7 @@ Follow these steps to set up the project:
 
 1. **Clone the repository**:
    ```zsh
-   git clone https://github.com/srijan-lamichhane/IntrusionDetection_ML.git
+   git clone https://github.com/srijan-lamichhane/IntrusionVigor.git
    cd IntrusionVigor
    ```
 2. **Copy the `.env.example` to `.env`**:
@@ -60,7 +61,7 @@ Follow these steps to set up the project:
 
 1. **Clone the repository**:
    ```zsh
-   git clone https://github.com/srijan-lamichhane/IntrusionDetection_ML.git
+   git clone https://github.com/srijan-lamichhane/IntrusionVigor.git
    cd IntrusionVigor
    ```
 
@@ -71,12 +72,12 @@ Follow these steps to set up the project:
 
 3. **create virtual Environment**:
    ```zsh
-    virtualenv venv
+    virtualenv _venv
    ```
 
 4. **Activate virtual Environment**:
    ```zsh
-    venv/scripts/activate
+    _venv/scripts/activate
    ```
 
 5. **set PYTHONPATH environment variable**:
@@ -110,16 +111,17 @@ This will start the Intrusion Detection System menu where you can choose various
 Here are the available commands in the menu:
 
 0. **Exit**: Exit the program.
-1. **Preprocess Data**: Prepare the data for training.
-2. **Train Scalar Model**: Train the scaler model for data normalization.
-3. **Train KNN Model**: Train the K-Nearest Neighbors model.
-4. **Train Random Forest Model**: Train the Random Forest model.
-5. **Train SVM Model**: Train the Support Vector Machine model.
-6. **Train GBM Model**: Train the Gradient Boosting Machine model.
-7. **Evaluate KNN Model**: Evaluate the K-Nearest Neighbors model.
-8. **Evaluate Random Forest Model**: Evaluate the Random Forest model.
-9. **Evaluate SVM Model**: Evaluate the Support Vector Machine model.
-10. **Evaluate GBM Model**: Evaluate the Gradient Boosting Machine model.
+1. **Open Data Visualization Notebook**: Open the Jupyter Notebook for data visualization.
+2. **Preprocess Data**: Prepare the data for training.
+3. **Train Scalar Model**: Train the scaler model for data normalization.
+4. **Train KNN Model**: Train the K-Nearest Neighbors model.
+5. **Train Random Forest Model**: Train the Random Forest model.
+6. **Train SVM Model**: Train the Support Vector Machine model.
+7. **Train GBM Model**: Train the Gradient Boosting Machine model.
+8. **Evaluate KNN Model**: Evaluate the K-Nearest Neighbors model.
+9. **Evaluate Random Forest Model**: Evaluate the Random Forest model.
+10. **Evaluate SVM Model**: Evaluate the Support Vector Machine model.
+11. **Evaluate GBM Model**: Evaluate the Gradient Boosting Machine model.
 
 ## Contributing
 
