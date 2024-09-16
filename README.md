@@ -25,7 +25,7 @@ Ensure you have the following installed on your machine:
 - Python 3.6 or higher
 - Git
 
-## Installation
+## Installation For Linux
 
 Follow these steps to set up the project:
 
@@ -55,6 +55,45 @@ Follow these steps to set up the project:
     ```zsh
     python setup.py install
     ```
+
+## Installation For Windows
+
+1. **Clone the repository**:
+   ```zsh
+   git clone https://github.com/srijan-lamichhane/IntrusionDetection_ML.git
+   cd IntrusionVigor
+   ```
+
+2. **Install virtual Environment **:
+   ```zsh
+    pip install virtualenv
+   ```
+
+3. **create virtual Environment **:
+   ```zsh
+    virtualenv venv
+   ```
+
+4. **Activate virtual Environment **:
+   ```zsh
+    venv/scripts/activate
+   ```
+
+5. ** set PYTHONPATH environment variable**:
+   ```zsh
+   $env:PYTHONPATH = "$env:PYTHONPATH;$PWD"
+   ```
+
+6. **Install the required packages**:
+    ```zsh
+    pip install -r requirements.txt
+    ```
+7. **Install the package**:
+    ```zsh
+    python setup.py install
+    ```
+
+
 
 ## Usage
 
