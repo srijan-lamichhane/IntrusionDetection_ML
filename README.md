@@ -64,22 +64,22 @@ Follow these steps to set up the project:
    cd IntrusionVigor
    ```
 
-2. **Install virtual Environment **:
+2. **Install virtual Environment**:
    ```zsh
     pip install virtualenv
    ```
 
-3. **create virtual Environment **:
+3. **create virtual Environment**:
    ```zsh
     virtualenv venv
    ```
 
-4. **Activate virtual Environment **:
+4. **Activate virtual Environment**:
    ```zsh
     venv/scripts/activate
    ```
 
-5. ** set PYTHONPATH environment variable**:
+5. **set PYTHONPATH environment variable**:
    ```zsh
    $env:PYTHONPATH = "$env:PYTHONPATH;$PWD"
    ```
