@@ -12,7 +12,8 @@ setup(
         'joblib',
         'matplotlib',
         'seaborn',
-        'setuptools'
+        'setuptools',
+        'notebook'
     ],
     entry_points={
         'console_scripts': [            
@@ -26,6 +27,7 @@ setup(
             'evaluate_random_forest_model=scripts.07_evaluate_model:evaluate_rf',
             'evaluate_svm_model=scripts.07_evaluate_model:evaluate_svm',
             'evaluate_gbm_model=scripts.07_evaluate_model:evaluate_gbm',
+            'open_data_visualization_notebook=scripts.open_notebook:main',
             'main=main:main',   
         ],
     },

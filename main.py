@@ -2,16 +2,17 @@ import subprocess
 
 def main():
     menu_options = {
-        1: 'Preprocess Data',
-        2: 'Train Scalar Model',
-        3: 'Train KNN Model',
-        4: 'Train Random Forest Model',
-        5: 'Train SVM Model',
-        6: 'Train GBM Model',
-        7: 'Evaluate KNN Model',
-        8: 'Evaluate Random Forest Model',
-        9: 'Evaluate SVM Model',
-        10: 'Evaluate GBM Model',
+        1: 'Open Data Visualization Notebook',
+        2: 'Preprocess Data',
+        3: 'Train Scalar Model',
+        4: 'Train KNN Model',
+        5: 'Train Random Forest Model',
+        6: 'Train SVM Model',
+        7: 'Train GBM Model',
+        8: 'Evaluate KNN Model',
+        9: 'Evaluate Random Forest Model',
+        10: 'Evaluate SVM Model',
+        11: 'Evaluate GBM Model',
         0: 'Exit',
     }
 
@@ -41,3 +42,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+        
