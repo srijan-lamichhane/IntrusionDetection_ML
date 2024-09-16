@@ -1,17 +1,91 @@
-# Intrusion Detection System
+# IntrusionVigor
 
-## Project Overview
-This project implements an Intrusion Detection System using various machine learning models such as KNN, SVM, Random Forest, and GBM. The project is structured to facilitate easy data processing, model training, and evaluation.
+IntrusionVigor is a machine learning-based intrusion detection system designed to preprocess data, train various models, and evaluate their performance. This project aims to enhance network security by leveraging advanced machine learning techniques.
 
-## Directory Structure
-- `data/`: Contains training and testing data.
-- `models/`: Stores trained models and the scaler model.
-- `notebooks/`: Jupyter notebooks for exploratory data analysis and model experimentation.
-- `scripts/`: Python scripts for data preprocessing, model training, and evaluation.
-- `src/`: Source code organized into subdirectories for data processing, models, evaluation, and utilities.
-- `tests/`: Unit tests for the codebase.
-- `results/`: Results from experiments, including metrics and plots.
-- `requirements.txt`: List of dependencies.
-- `README.md`: Project overview and documentation.
-- `.gitignore`: Specifies files and directories to be ignored by Git.
-- `setup.py`: Script to install the project as a package.
+## Table of Contents
+
+- [IntrusionVigor](#intrusionvigor)
+  - [Table of Contents](#table-of-contents)
+  - [Project Abstract](#project-abstract)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Commands](#commands)
+  - [Contributing](#contributing)
+  - [License](#license)
+
+## Project Abstract
+
+IntrusionVigor aims to empower network security by utilizing machine learning algorithms for intrusion detection. The system preprocesses network data, trains multiple machine learning models including K-Nearest Neighbors, Random Forest, Support Vector Machine, and Gradient Boosting Machine, and evaluates their effectiveness. This project provides a user-friendly command-line interface to facilitate the preprocessing, training, and evaluation processes, making it easier to integrate and deploy advanced intrusion detection capabilities.
+
+## Prerequisites
+
+Ensure you have the following installed on your machine:
+
+- Python 3.6 or higher
+- Git
+
+## Installation
+
+Follow these steps to set up the project:
+
+1. **Clone the repository**:
+   ```zsh
+   git clone https://github.com/your-username/  .git
+   cd IntrusionVigor
+   ```
+2. **Copy the `.env.example` to `.env`**:
+   ```zsh
+    cp .env.example .env
+   ```
+3. **Create a virtual environment**:
+   ```zsh
+    python -m venv _venv
+   ```
+4. **Activate virtual environment `_venv` and `.env` file**:
+    ```zsh
+    source _venv/bin/activate
+    source .env
+    ```
+5. **Install the required packages**:
+    ```zsh
+    pip install -r requirements.txt
+    ```
+6. **Install the package**:
+    ```zsh
+    python setup.py install
+    ```
+
+## Usage
+
+Once the installation steps are completed, you can run the program using the following command:
+
+```zsh
+main
+```
+
+This will start the Intrusion Detection System menu where you can choose various options to preprocess data, train models, and evaluate them.
+
+## Commands
+
+Here are the available commands in the menu:
+
+0. **Exit**: Exit the program.
+1. **Preprocess Data**: Prepare the data for training.
+2. **Train Scalar Model**: Train the scaler model for data normalization.
+3. **Train KNN Model**: Train the K-Nearest Neighbors model.
+4. **Train Random Forest Model**: Train the Random Forest model.
+5. **Train SVM Model**: Train the Support Vector Machine model.
+6. **Train GBM Model**: Train the Gradient Boosting Machine model.
+7. **Evaluate KNN Model**: Evaluate the K-Nearest Neighbors model.
+8. **Evaluate Random Forest Model**: Evaluate the Random Forest model.
+9. **Evaluate SVM Model**: Evaluate the Support Vector Machine model.
+10. **Evaluate GBM Model**: Evaluate the Gradient Boosting Machine model.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).                          

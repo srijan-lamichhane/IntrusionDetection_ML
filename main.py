@@ -16,7 +16,7 @@ def main():
     }
 
     while True:
-        print("\nIntrusion Detection System - Main Menu")
+        print("\nIntrusionVigor: Empowering Network Security with Machine Learning - Main Menu")
         for key in sorted(menu_options.keys()):
             print(f"{key}. {menu_options[key]}")
         
